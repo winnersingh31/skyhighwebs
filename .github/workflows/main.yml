@@ -1,4 +1,4 @@
-name: Build, Push and Deploy a Docker Image
+name: Update App
 
 on:
  push:
@@ -6,31 +6,15 @@ on:
 
 permissions:
   contents: read
-  packages: write
 
 jobs:
- build-push-deploy-image:
+ deploy-app:
    runs-on: ubuntu-latest
    steps:
      - name: Checkout repository
        uses: actions/checkout@v4
-     - name: Log in to the Container registry
-       uses: docker/login-action@v3.3.0
-       with:
-         registry: ghcr.io
-         username: ${{ github.actor }}
-         password: ${{ secrets.GITHUB_TOKEN }}
-     - name: Build and push Docker image
-       id: push
-       uses: docker/build-push-action@v6.5.0
-       with:
-         context: .
-         push: true
-         tags: ghcr.io/${{ github.repository }}:latest
      - name: Deploy the app
        uses: digitalocean/app_action/deploy@v2
-       env:
-         SAMPLE_DIGEST: ${{ steps.push.outputs.digest }}
        with:
          token: ${{ dop_v1_d99fce7ccabc36737a2978d8c81d029f61e70fb098fa057d97e3dd5fac6c7561
 
