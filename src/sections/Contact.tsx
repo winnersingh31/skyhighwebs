@@ -14,7 +14,8 @@ export const ContactSection = () => {
             <div>
 
               <h2 className='font-serif text-2xl md:text-3xl'>Lets create something amazing together</h2>
-              <p className='text-sm md:text-base mt-2'>Ready to bring your next project to life? Lets connect and discuess how I can help you achieve your goals. Email me: Info@skyhighwebs.com</p>
+              <p className='text-sm md:text-base mt-2'>Ready to bring your next project to life? Lets connect and discuess how I can help you achieve your goals. Email me: Info@skyhighwebs.com
+                <br />Address: 134, Basant Vihar, Ludhiana, 141001</p>
             </div>
             <div>
               <button className='text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900'>
