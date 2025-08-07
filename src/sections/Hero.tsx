@@ -102,12 +102,12 @@ export const HeroSection = () => {
       </div>
       <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
         <button className='inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl'>
-          <span className='font-semibold z-10'>Explore My Work</span>
+          <span className='font-semibold z-10'><a href="https://github.com/winnersingh31?tab=projects"  target="_blank">Explore My Work</a></span>
           <ArrrowDown className="size-4" />
         </button>
         <button className='inline-flex items-center gap-2 border-white bg-white text-gray-900 h-12 px-6 rounded-xl'>
           <span>👋🏼</span>
-          <span className='font-semibold z-10'>Lets Connect</span>
+          <span className='font-semibold z-10'><a href="mailto:info@skyhighwebs.com">Lets Connect</a></span>
         </button>
       </div>
       
